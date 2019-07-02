@@ -9,8 +9,8 @@ sed -i "s/{VERSION_NAME}/$VERSION_NAME/g"  ~/io_docker_setup/custom.js
 
 ### Setup Jupyter config file
 echo "c.NotebookApp.ip = '0.0.0.0'" > ~/.jupyter/jupyter_notebook_config.py
-echo "c.NotebookApp.extra_static_paths = ['/home/jovyan/.js_files']" >> ~/.jupyter/jupyter_notebook_config.py
-echo "c.NotebookApp.extra_template_paths = ['/home/jovyan/.html_files','...html/templates','...html']" >> ~/.jupyter/jupyter_notebook_config.py
+echo "c.NotebookApp.extra_static_paths = ['/home/jayanayana/.js_files']" >> ~/.jupyter/jupyter_notebook_config.py
+echo "c.NotebookApp.extra_template_paths = ['/home/jayanayana/.html_files','...html/templates','...html']" >> ~/.jupyter/jupyter_notebook_config.py
 echo "c.NotebookApp.port = 80" >> ~/.jupyter/jupyter_notebook_config.py  
 echo "c.NotebookApp.token = ''" >> ~/.jupyter/jupyter_notebook_config.py  
 echo "c.NotebookApp.allow_root = True" >> ~/.jupyter/jupyter_notebook_config.py  
@@ -69,8 +69,8 @@ R --slave --no-restore --no-save -e "devtools::install_github('dviraran/SingleR'
 
 ### Install nb-extensiosn and GenePattern notebook
 conda install -y -c damianavila82 rise
-#conda install -y -c conda-forge jupyter_contrib_nbextensions
-pip install jupyter_contrib_nbextensions
+conda install -y -c conda-forge jupyter_contrib_nbextensions
+#pip install jupyter_contrib_nbextensions
 
 ### Setup nb-extensions
 jupyter nbextensions_configurator enable
