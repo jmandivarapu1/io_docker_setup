@@ -69,7 +69,8 @@ R --slave --no-restore --no-save -e "devtools::install_github('dviraran/SingleR'
 
 ### Install nb-extensiosn and GenePattern notebook
 conda install -y -c damianavila82 rise
-conda install -y -c conda-forge jupyter_contrib_nbextensions
+#conda install -y -c conda-forge jupyter_contrib_nbextensions
+pip install jupyter_contrib_nbextensions
 
 ### Setup nb-extensions
 jupyter nbextensions_configurator enable
